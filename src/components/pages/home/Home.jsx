@@ -14,7 +14,7 @@ export const Home=() =>{
             <Hero/>
             <Services/>
             <CaseStudy/>
-            {/* <Process/> */}
+            <Process/>
             {/* <Team/> */}
             {/* <Testimonials/> */}
             <ContactForm/>
