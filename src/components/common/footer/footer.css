@@ -1,0 +1,531 @@
+.footer-section{
+    /* min-height: 35rem; */
+    height: auto;
+
+    margin-top: 8.75rem;
+
+    background-color: var(--clr-secondary);
+    color: aliceblue;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+
+}
+
+.inner-footer{
+    /* border: 2px solid white; */
+    background-color: var(--clr-secondary);
+    /* height: 28.44rem;  
+    width: 78.37rem;
+    margin: 0 auto; */
+
+    display: flex;
+    flex-direction: column;
+    gap: 4.125rem;
+}
+
+.inner-footer:nth-child(2){
+
+    gap: 2rem;
+}
+
+.nav-secondary{
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid salmon; */
+
+    justify-content: space-between;
+}
+
+
+.nav-links-footer a{
+    text-decoration: none;
+    color: var(--clr-terinary);   
+}
+
+.nav-links-footer a:hover{
+    text-decoration: underline;
+    color: var(--clr-terinary);   
+}
+
+.nav-links-footer{
+    color: var(--clr-terinary);
+    /* margin-right: 13rem; */
+    font-size: var(--fs-p);
+}
+.nav-links-footer li{
+    list-style: none;
+}
+
+.nav-links-footer ul{
+    display: flex;
+    gap: 2.5rem;
+
+    color: var(--clr-terinary);
+}
+
+.footer-social-links{
+    display: flex;
+    gap: 1.25rem; 
+}
+
+
+/*----------------------------------*/
+.contact-info{
+    /* border: 1px solid wheat; */
+
+    display: flex;
+   
+    gap: 16.5rem;
+
+    /* height: 11.56rem; */
+}
+
+.info-left{
+    /* width: 28rem; */
+    /* width: 30%; */
+    display: inline-flex;
+    flex-direction: column;
+   
+    /* border: 1px solid white; */
+}
+.info-left ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+}
+.info-left .font-p{
+    font-weight: 500;
+}
+
+.info-left mark{
+    background-color: var(--clr-accent);
+    border-radius: 7px;
+    padding: 3px;
+}
+
+.info-right{
+    background-color: #292A32;
+    width: 100%;
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    gap:1.25rem;
+
+    padding: 3.625rem 2.5rem;
+}
+
+.info-right input{
+    height: 4rem;
+    width: 17.75rem;
+
+    vertical-align: middle;
+    padding-left: 2rem;
+
+    background-color: #292A32;
+    border: 1px solid white;
+    border-radius: 14px;
+
+    caret-color: white;
+    color: white;
+}
+
+.info-right input::placeholder{
+    color: white;
+}
+
+.info-right button{
+    background-color: var(--clr-accent);
+    height: 4rem;
+    width: 15.5rem;
+
+    font-size: 1.25rem;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.info-right button:hover{
+    background-color: #90EE90;
+}
+
+.copyright{
+    display: flex;
+    font-size: 1.25rem;
+}
+
+.hr{
+    border: 1px solid var(--clr-terinary);
+}
+
+/* .copyright-text{
+    margin-top: 3.12rem;
+} */
+
+.copyright a{
+    margin-left: 2.5rem;
+    text-decoration: none;
+    color: var(--clr-terinary);
+}
+
+.credits{
+    margin-bottom: 1.25rem;
+}
+
+.credits-line{
+    font-size: 1.25rem;    
+}
+
+.credits-line i{
+    font-style: italic;
+}
+
+@media screen and (min-width: 20em) and (max-width: 24.425em){
+
+    .footer-section{  
+        margin-top: 4.375rem;
+    }
+
+    .inner-footer{
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 2.5rem;
+        justify-content: center;
+    }
+
+    .inner-footer a{
+        text-decoration: underline;
+    }
+
+    .nav-secondary{
+
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        
+        text-align: center;
+        
+    }
+
+    .f-logo-img{
+        height: 25px;
+        width: 130px;
+    }
+
+    .nav-links-footer ul{
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        align-items: center; 
+    
+        color: var(--clr-terinary);
+
+        font-size: 1rem;
+    }
+
+    .contact-info{
+        
+        display: flex;
+        flex-direction: column;
+        gap: 1.875rem;
+        justify-content: center;
+    }
+    
+    .info-left{
+        width: auto;
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    
+    }
+
+    .info-left ul{
+        font-size: 1rem;
+    }
+
+    .info-right{
+        padding: 1.25rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+   
+
+    .info-right input{
+        
+        width: auto;
+        max-width: 15rem;
+        vertical-align: middle;
+        padding-left: 2.25rem;
+
+    }
+
+
+    .info-right button{
+       
+        height: 4rem;
+        max-width: 15rem;
+
+        font-size: 1rem;
+        padding-inline: 3rem;
+        padding-block: 1rem;
+    }
+
+    .copyright{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .copyright-text, .copyright a{
+        margin: 0;
+    }
+
+    .credits-line{
+        text-align: center;
+        font-size: 1rem;
+    }
+ 
+}
+
+
+@media screen and (min-width: 24.4375em) and (max-width: 47.9875em) {
+
+    .footer-section{  
+        margin-top: 4.375rem;
+    }
+
+    .inner-footer{
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 2.5rem;
+        justify-content: center;
+    }
+
+    .nav-secondary{
+
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        
+        text-align: center;
+        
+    }
+
+    .f-logo-img{
+        height: 29px;
+        width: 180px;
+    }
+
+    .nav-links-footer ul{
+        display: flex;
+        /* flex-direction: column; */
+        gap: 1.25rem;
+        align-items: center; 
+    
+        color: var(--clr-terinary);
+
+        font-size: 16px;
+    }
+
+    .contact-info{
+        
+        display: flex;
+        flex-direction: column;
+        gap: 1.875rem;
+        justify-content: center;
+    }
+    
+    .info-left{
+        width: auto;
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-right{
+        padding: 1.25rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+   
+
+    .info-right input{
+        
+        width: auto;
+        max-width: 15rem;
+        vertical-align: middle;
+        padding-left: 2.25rem;
+
+    }
+
+
+    .info-right button{
+       
+        height: 4rem;
+        max-width: 15rem;
+
+        font-size: 1rem;
+        padding-inline: 3rem;
+        padding-block: 1rem;
+    }
+
+    .copyright{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copyright-text, .copyright a{
+        margin: 0;
+    }
+
+    .credits-line{
+        text-align: center;
+    }
+}
+
+
+
+@media screen and (min-width: 48em) and (max-width: 81.2375em) {
+    
+    .footer-section{  
+        margin-top: 4.375rem;
+    }
+
+    .inner-footer{
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 3rem;
+        justify-content: center;
+    }
+
+    .inner-footer a{
+        text-decoration: underline;
+    }
+
+    .nav-secondary{
+
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+ 
+    }
+
+    .f-logo-img{
+        height: 29px;
+        width: 180px;
+    }
+
+    .nav-links-footer ul{
+        display: flex;
+        
+        gap: 2.5rem;
+        align-items: center; 
+    
+        color: var(--clr-terinary);
+
+        font-size: 18px;
+    }
+
+    .contact-info{
+        
+        display: flex;
+        flex-direction: column;
+        gap: 1.875rem;
+        justify-content: center;
+    }
+    
+    .info-left{
+        width: 20.75rem;
+
+        display: flex;
+        flex-direction: column;
+
+        font-size: 1.25rem;
+        
+    }
+
+    .info-right{
+        padding: 3.625rem 2.5rem;
+
+        display: flex;
+        
+        gap: 1.25rem;
+        
+    }
+   
+
+    .info-right input{
+        
+        width: 17.75rem;
+        font-size: 1.25rem;
+
+        vertical-align: middle;
+        padding-left: 2.25rem;
+
+    }
+
+
+    .info-right button{
+       
+        height: 4rem;
+        width: 15.5rem;
+
+        font-size: 1.25rem;
+        padding-inline: 2.25rem;
+        padding-block: 1.25rem;
+    }
+
+    .copyright{
+        display: flex;
+        
+        gap: 2.25rem;
+        font-size: 1.25rem;
+    }
+
+    .copyright-text, .copyright a{
+        margin: 0;
+    }
+
+    .credits-line{
+        font-size: 1.25rem;
+    }
+
+}
+
+/*----------------------------Additional queries-------------*/
+
+@media screen and (min-width: 30.6em) and (max-width: 47.9875em){
+    .info-right{
+        display: flex;
+        flex-direction: row;
+        gap: 1.25rem;
+    }
+
+    .info-right button{
+        padding-block: 0;
+    }
+
+}

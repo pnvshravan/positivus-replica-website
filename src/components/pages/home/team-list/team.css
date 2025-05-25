@@ -1,0 +1,110 @@
+
+/*-----------------team-members-sprite--------------*/
+.john-s{
+    height: 96px;
+    width: 96px;
+    background: url('/src/assets/team-members.webp') 0 0;
+}
+.jane-d{
+    height: 96px;
+    width: 96px;
+    background: url('/src/assets/team-members.webp') -136px 0;
+}
+.mich-b{
+    height: 96px;
+    width: 96px;
+    background: url('/src/assets/team-members.webp') -272px 0;
+}
+.emily-j{
+    height: 96px;
+    width: 96px;
+    background: url('/src/assets/team-members.webp') -408px 0;
+}
+.brian-w{
+    height: 96px;
+    width: 96px;
+    background: url('/src/assets/team-members.webp') -544px 0;
+}
+.sarah-k{
+    height: 96px;
+    width: 96px;
+    background: url('/src/assets/team-members.webp') -680px 0;
+}
+/*---------------------------------------------------------------------------*/
+.team-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 9.37rem;
+}
+.team-heading{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-left: 21.25rem;
+}
+.team-heading p{
+    width: 29.5rem;
+    font-size: 1.25rem;
+}
+
+.team-list{
+    margin-left: 21.25rem;
+    margin-top: 5.25rem;
+
+    /* border: 1px solid black; */
+    width: 77.5rem;
+    /* height: 50rem; */
+    height: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, max(24rem));
+    
+    column-gap: 2.62rem;
+    row-gap: 2.5rem;
+
+}
+.team-member{
+    border: 2px solid black;
+    border-radius: 45px;
+    padding: 2rem;
+    
+    height: 21.5rem;
+}
+.tm-pi{
+    display: flex;
+    flex-direction: column;
+    gap:1.75rem;
+}
+.tm-pi-photo{
+    display: flex;
+    justify-content: space-around;
+    /* gap: 1.25rem; */
+}
+.tm-name{
+    margin-top: 3.25rem;
+}
+.tm-desc{
+    font-size: 1.12rem;
+}
+
+
+@media screen and (min-width: 64em) and (max-width: 90em) {
+    .team-container{
+        margin-top: 8.75rem;
+    }
+
+    .team-heading{
+        margin-left: 6.25rem;
+    }
+
+    .team-heading p{
+        width: 30.5rem;
+        font-size: 1.1.25rem;
+    }
+
+    .team-list{
+        margin-left: 6.25rem;
+        margin-top: 5rem;
+    }
+
+}

@@ -1,0 +1,201 @@
+/* HTML: <div class="tooltip">This is a Speech Bubble with a solid coloration and with border radius </div> */
+/*https://css-generators.com/*/
+
+
+.tooltip {
+    color: #fff;
+    font-size: 18px;
+    max-width: 37.87rem;
+    text-align: center;
+    height: 14.87rem;
+ 
+    /* var(--clr-accent) */
+  }
+
+.tooltip {
+  /* triangle dimension */
+  --a: 90deg; /* angle */
+  --h: 1.5rem;   /* height */
+
+  --p: 14.000000000000002%;  /* triangle position (0%:left 100%:right) */
+  --r: 45px; /* the radius */
+  --b: 2px; /* border width  */
+  --c1: #B9FF66;
+  --c2: #191A23;
+
+  padding: 1em;
+  border-radius: var(--r) var(--r) min(var(--r),100% - var(--p) - var(--h)*tan(var(--a)/2)) min(var(--r),var(--p) - var(--h)*tan(var(--a)/2))/var(--r);
+  clip-path: polygon(0 100%,0 0,100% 0,100% 100%,
+    min(100%,var(--p) + var(--h)*tan(var(--a)/2)) 100%,
+    var(--p) calc(100% + var(--h)),
+    max(0%  ,var(--p) - var(--h)*tan(var(--a)/2)) 100%);
+  background: var(--c1);
+  border-image: conic-gradient(var(--c1) 0 0) fill 0/
+    var(--r) max(0%,100% - var(--p) - var(--h)*tan(var(--a)/2)) 0 max(0%,var(--p) - var(--h)*tan(var(--a)/2))/0 0 var(--h) 0;
+  position: relative;
+}
+
+.tooltip:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  padding: var(--b);
+  border-radius: inherit;
+  clip-path: polygon(0 100%,0 0,100% 0,100% 100%,
+    min(100% - var(--b),var(--p) + var(--h)*tan(var(--a)/2) - var(--b)*tan(45deg - var(--a)/4)) calc(100% - var(--b)),
+    var(--p) calc(100% + var(--h) - var(--b)/sin(var(--a)/2)),
+    max(       var(--b),var(--p) - var(--h)*tan(var(--a)/2) + var(--b)*tan(45deg - var(--a)/4)) calc(100% - var(--b)));
+  background: var(--c2) content-box;
+  border-image: conic-gradient(var(--c2) 0 0) fill 0/
+    var(--r) max(var(--b),100% - var(--p) - var(--h)*tan(var(--a)/2)) 0 max(var(--b),var(--p) - var(--h)*tan(var(--a)/2))/0 0 var(--h) 0;
+}
+
+.tooltip{
+  text-wrap: wrap;
+  font-size: 1rem;
+  padding: 3rem 3.25rem;
+    
+}
+/*-------------------------------------------------------------------------------------*/
+.testimonal-container{
+  margin-top: 6.25rem;
+  /* border: 2px solid black; */
+}
+
+
+.testimonial-heading{
+  display: flex;
+  width: 48rem;
+  align-items: center;
+  gap: 2.5rem;
+  margin-left: 8.75rem;
+}
+
+.testimonial-heading p{
+  width: 29rem;
+  font-size: 1.12rem;
+}
+
+.testimonials{
+  margin-top: 3.62rem;
+}
+
+
+.testimonial-inner{
+
+  /* width: 100%; */
+  overflow: hidden;
+  position: relative; 
+  white-space: nowrap;
+
+  margin-left: 8.75rem;
+
+  width: 102.5rem;
+  height: 39rem;
+  background-color: var(--clr-secondary);
+  border-radius: 45px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.t-track{
+  display: flex;
+  
+  gap: 50px;
+  transition: transform 0.5s ease-in-out;
+
+  margin-top: 5.875rem;
+  padding: 0 50px;
+}
+
+.t-slide{
+  /* border: 1px solid green; */
+  max-width: 37.87rem;
+  /* min-width: 100%; */
+  height: max-content;
+  flex: 0 0 auto;
+  /* Smooth sliding */
+  
+}
+.slide_no{
+  color: var(--clr-terinary);
+  background-color: #343434;
+  width: max-content;
+  padding: 10px;
+  border: 2px solid var(--clr-accent);
+  border-radius: 45px;
+  /* display: inline; */
+}
+.slide_no.active{
+  background-color: #E4D00A;
+  color: var(--clr-secondary);
+  border: 2px solid var(--clr-accent);
+}
+
+.person{
+  margin-top: 2.5rem;
+  margin-left: 5rem;
+  
+}
+.person h4{
+  color: var(--clr-accent);
+}
+.person p{
+  color: var( --clr-terinary);
+}
+/*-----------------------------------*/
+
+.indicators{
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 4.75rem;
+  width: max-content ;
+  
+
+  gap: 10.625rem;
+
+  /* border:1px solid #B9FF66; */
+}
+
+.dots{
+  align-content: center;
+}
+
+.dot {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  background-color: #fff;
+  clip-path: polygon(50% 15%, 100% 0, 85% 50%, 100% 100%, 50% 85%, 0 100%, 15% 50%, 0 0);
+}
+.dot.active {
+  background: #B9FF66;
+}
+
+@media screen and (min-width: 64em) and (max-width: 90em) {
+  
+  .testimonal-container{
+    margin-top: 6.25rem;
+  }
+
+  .testimonial-heading{
+    margin-left: 6.25rem;
+  }
+
+  .testimonials{
+    margin-top: 5rem;
+  }
+
+  .testimonial-inner{
+    margin-left: 6.25rem;
+
+    width: 77.5rem;
+  }
+
+
+
+}

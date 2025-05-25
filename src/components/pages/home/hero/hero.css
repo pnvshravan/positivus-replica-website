@@ -1,0 +1,246 @@
+.hero-container{
+    margin-top: 4.375rem;
+    padding-inline: var(--pd-xl);
+}
+
+.hero-section{
+    /* min-height: 40.62rem; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-left{
+    width: 45%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.1875rem;
+}
+
+.hero-left h1{
+    line-height: auto;
+    /* max-width: 38.12rem; */
+    /* width: auto; */
+}
+
+/* .hero-left p{
+    
+    margin-top: 0.94rem;
+
+    max-width: 47.5rem;
+    width: auto;
+
+    font-size: 1.75rem;
+} */
+
+.hero-left button{
+    /* height: 4.7rem; */
+    padding: 1.25rem 2.1875rem;
+    font-size: var(--fs-p);
+
+    border-radius: 14px;
+    font-size: 1.25rem;
+    color: white;
+    background-color: var(--clr-secondary);
+    cursor: pointer;
+}
+
+.hero-left button:hover{
+        /* background-color: #343434; */
+        border: 3px solid var(--clr-accent);
+}
+
+.hero-right img{
+    width: 600px;
+    height: auto;
+}
+
+
+@media screen and (min-width: 20em) and (max-width: 24.375em) 
+{
+
+    .hero-container{
+        margin-top: 1.25rem;
+        padding-inline: var(--pd-mob-and-tablet-plus);
+    }
+
+    .hero-section{
+        min-height: 37.5rem;
+
+        display: grid;
+        gap: 1.25rem;
+        
+        grid-template-areas:
+        "heading"
+        "image"
+        "paragraph"
+        "button";
+    }
+
+    .hero-left{
+        /* margin-left: 8.75rem; */
+        /* width: 100%; */
+        display: contents;  
+    }
+
+    .hero-left h1{
+        font-size: var(--fs-h3);
+        font-weight: 500; 
+        /* text-wrap: wrap; */
+        
+        line-height: auto;
+        grid-area: heading;
+        /* max-width: 38.12rem; */
+    }
+    .hero-left p{
+        font-size: 1rem;
+        line-height: 1.5;
+        height: max-content;
+        width: 100%;
+        grid-area: paragraph;
+    }
+
+    .hero-left button{
+        width: 9.75rem;
+        font-size: 14px;
+        height: 2.5rem;
+        padding: 0;
+
+        grid-area: button;
+    }
+
+    .hero-right{
+        grid-area: image;
+        /* align-items: center; */
+        margin: auto;
+    }
+    .hero-right img{
+        height: auto;
+        width: 260px;    
+    }
+}
+
+
+@media screen and (min-width: 24.4375em) and (max-width: 47.9875em) {
+
+    .hero-container{
+        margin-top: 1.25rem;
+        padding-inline: 0;
+        min-height: 37.5rem;
+
+    }
+
+    .hero-section{
+        display: grid;
+        gap: 20px;
+        
+        grid-template-areas:
+        "heading"
+        "image"
+        "paragraph"
+        "button";
+    }
+
+
+    .hero-left{
+        /* margin-left: 8.75rem; */
+        width: 100%;
+        display: contents;
+    }
+
+    .hero-left h1{
+        font-size: 30px;
+        font-weight: 500; 
+        /* text-wrap: wrap; */
+
+        line-height: auto;
+        grid-area: heading;
+        margin: auto;
+        
+        /* max-width: 38.12rem; */
+    }
+    .hero-left p{
+       
+        line-height: 1.5;
+        height: auto;
+        width: 100%;
+        grid-area: paragraph;
+        font-size: 1.25rem;
+
+    }
+
+   
+
+    .hero-left button{
+       
+        width: 16.25rem;
+        font-size: 1.25rem;
+        padding: 0.625rem 1.25rem;
+        height: 3.75rem;
+
+        grid-area: button;
+        margin-inline: auto;
+        display: block;
+
+    }
+    .hero-right img{
+        height: auto;
+        width: 100%;
+        max-width: 450px;
+
+    }
+
+    .hero-right{
+        grid-area: image;
+        /* align-items: center; */
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 48em) and (max-width: 81.2375em) {
+    
+    .hero-container{
+        padding-inline: 0;
+        margin-top: 2.5rem;
+        
+        /* max-height: 32.125rem; */
+    }
+
+    .hero-section{
+        display: flex;
+        justify-content: space-between;
+        /* height: max-content; */
+    }
+
+    .hero-left{
+        width: 45%;
+        display: flex;
+        gap: 20px;
+    }
+
+
+    .hero-left h1{
+        font-size: var(--fs-h2);
+    }
+
+    .hero-left p{
+        font-size: var(--fs-p);
+
+    }
+
+    .hero-left button{
+       
+        width: 16.25rem;
+        padding: 1rem;
+        height: 3.75rem;
+    }
+
+    .hero-right img{
+        min-height: 350px;
+        height: auto;
+        width: 100%;
+        max-width: 500px;
+    }
+
+}
+

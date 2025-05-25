@@ -1,0 +1,339 @@
+.navbar-container{
+    padding-block: 0.625rem;
+    padding-inline: var(--pd-xl);
+
+    background-color: #fff;
+
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 10;
+ 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--clr-secondary);  
+    border-radius: 10px;
+
+    display: inline-block; /* Allows padding to affect background */
+    padding: 10px;   /* Adjust these values as needed */
+    transition: background-color 0.3s ease;
+
+    color: inherit;
+}
+
+
+.nav-links a:hover {
+    background-color: var(--clr-accent);
+    /* padding: 7px; */
+    text-decoration: none; 
+}
+
+/*un comment when all the route pages 
+are ready and mapped resp. */
+
+/* .nav-links a.active {
+    text-decoration: none;
+    background-color: var(--clr-accent);  
+    border-radius: 10px;
+
+    display: inline-block; 
+    padding: 10px;   
+    
+} */
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* max-width: 1240px; */
+    /* width: auto; */
+    margin-inline: auto;
+    
+    background: transparent;
+   
+}
+
+.nav-links li{
+    list-style: none;
+    width: max-content;
+}
+
+.nav-links ul{
+    display: flex;
+    gap: 1.875rem;
+} 
+
+.nav-btn{
+    border: 2px solid var(--clr-secondary);
+    border-radius: 14px;
+    background-color: #fff;
+
+    padding: 1.25rem 2.1875rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.nav-btn:hover{
+    background-color: var(--clr-accent);
+}
+.nav-links-mobile, .menu-btn-mobile{
+    display: none;
+}
+
+
+
+
+@media screen and (min-width: 20em) and (max-width: 24.425em) 
+{
+
+    .navbar-container{
+        margin: 0; 
+        padding-inline: 0;
+    }
+   
+    .nav-links, .nav-btn{
+        display: none; 
+    }
+    
+    .nav-links-mobile, .menu-btn-mobile{
+        display: block;
+        
+        /* background-color: grey; */
+    }
+
+    .logo img{
+        width: 130px;
+        height: 25px;
+    }
+ 
+    /* nav{  
+         
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        margin-inline: 1.875rem;   
+        margin-top: 1.875rem;
+        
+    } */
+   
+    /* .nav-links-mobile-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     
+        
+        border-radius: 10px;
+           
+    } */
+
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-links-mobile{
+        
+        position: relative;
+        
+        background-color: var(--clr-terinary);
+        
+        margin-top: 1.25rem;  
+        display: flex;
+      
+        justify-content: center;
+        
+    }
+    .nav-links-mobile ul{
+        min-width: 16.25rem;
+        
+        display: flex;
+        flex-direction: column;
+        
+        border-radius: 10px;
+        gap: 1rem;
+        position: absolute;
+        text-align: center;
+        background-color: var(--clr-terinary);
+
+        padding: 0.625rem;
+    }
+   
+
+    .nav-links-mobile li{  
+        list-style: none;
+    }
+
+    .nav-links-mobile a{
+        color: var(--clr-secondary);
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 24.4375em) and (max-width: 47.9875em) /*391 to 767.8*/
+{
+    .navbar-container{
+        margin: 0; 
+        padding-inline: var(--pd-lt-tab);
+    }
+
+    .nav-links, .nav-btn{
+        display: none; 
+    }
+    
+    .nav-links-mobile, .menu-btn-mobile{
+        display: block;
+        
+    }
+    
+    .navbar{
+        display: flex;
+        
+        justify-content: space-between;
+    }
+
+    /* .nav-links-mobile-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+           
+    } */
+    .nav-links-mobile{
+        
+        display: block;
+        /* border-radius: 10px; */
+        background-color: var(--clr-terinary);
+        
+        margin-top: 1.25rem;  
+        display: flex;
+        justify-content: center;
+        
+    }
+    .nav-links-mobile ul{
+        
+        min-width: 16.25rem;
+        display: flex;
+        flex-direction: column;
+        
+        border-radius: 10px;
+        gap: 1rem;
+        position: absolute;
+        text-align: center;
+        background-color: var(--clr-terinary);
+       
+        padding: 0.625rem;
+    }
+    
+    .nav-links-mobile li{  
+        list-style: none;
+        
+    }
+
+    .nav-links-mobile a{
+        color: var(--clr-secondary);
+        text-decoration: none;
+    }
+
+    .closebtn{
+        height: 45px;
+        width: 45px;
+    }
+    .menubtn{
+        height: 45px;
+        width: 45px;
+    }
+}
+
+@media screen and  (min-width: 48em) and (max-width: 81.2375em){
+    .navbar-container{
+        margin: 0; 
+        padding-inline: 0;
+    }
+    .navbar{ 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+    }
+    .nav-links ul{
+        display: flex;
+        gap: 1rem;
+        
+        font-size: 1rem;
+    }
+    .logo img{
+        width: 130px;
+        height: 25px;
+    }
+    .nav-btn{
+        padding: 1rem;
+        
+        width: 100%;
+        /* display: block; */
+        font-size: 1rem;
+        /* white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; */
+       
+    }
+}
+
+/*same rules as before one*/
+/* @media screen and (min-width: 53.8125em) and (max-width: 81.2375em)
+{
+    .navbar-container{
+        margin: 0; 
+        padding-inline: 0;
+    }
+
+    .navbar{ 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+    }
+    .nav-links ul{
+        display: flex;
+        gap: 1rem;
+        
+        font-size: 1rem;
+    }
+    .logo img{
+        width: 130px;
+        height: 25px;
+    }
+    .nav-btn{
+        padding: 1rem;
+        
+        width: 100%;
+        font-size: 1rem;
+       
+    }
+} */
+/* @media screen and (min-width: 81.25em) and (max-width: 90em) 1300 to 1440 */
+
+
+   
+    /* nav{
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        margin-inline: 6.25rem !important;  
+        margin-top: 3.75rem;
+    }
+  
+    .nav-links ul{
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    .nav-links{
+        margin-right: 2.5rem;
+    }
+     */
