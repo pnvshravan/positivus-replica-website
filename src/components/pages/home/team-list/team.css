@@ -31,36 +31,38 @@
     background: url('/src/assets/team-members.webp') -680px 0;
 }
 /*---------------------------------------------------------------------------*/
+
+
+.team-section{
+    margin-top: 9.37rem;
+}
+
 .team-container{
     display: flex;
     flex-direction: column;
-    margin-top: 9.37rem;
+    
 }
 .team-heading{
     display: flex;
     align-items: center;
     gap: 1.25rem;
-    margin-left: 21.25rem;
+    
 }
 .team-heading p{
     width: 29.5rem;
     font-size: 1.25rem;
 }
 
-.team-list{
-    margin-left: 21.25rem;
+.team-list, .team-list-expanded{
+    
     margin-top: 5.25rem;
 
     /* border: 1px solid black; */
-    width: 77.5rem;
-    /* height: 50rem; */
-    height: auto;
 
     display: grid;
     grid-template-columns: repeat(3, max(24rem));
     
     column-gap: 2.62rem;
-    row-gap: 2.5rem;
 
 }
 .team-member{
@@ -68,43 +70,126 @@
     border-radius: 45px;
     padding: 2rem;
     
-    height: 21.5rem;
-}
-.tm-pi{
+    /* height: 21.5rem; */
     display: flex;
     flex-direction: column;
     gap:1.75rem;
 }
-.tm-pi-photo{
+
+.tm-pi{
     display: flex;
     justify-content: space-around;
     /* gap: 1.25rem; */
 }
-.tm-name{
-    margin-top: 3.25rem;
+
+.tm-pi-left{
+    display: flex;
+    gap: 1.25rem;
 }
+
+.tm-name{
+    /* margin-top: 3.25rem; */
+    align-self: flex-end;
+}
+
+.tm-name h4{
+    font-weight: 500;
+}
+
 .tm-desc{
     font-size: 1.12rem;
 }
 
+.team-list-expanded {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.5s ease;
+  margin-top: 0;
+}
 
-@media screen and (min-width: 20em) and (max-width: 24em) {
-    .team-container{
-        margin-top: 8.75rem;
+.team-list-expanded.open {
+  /* adjust if needed */
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  margin-top: 2.5rem;
+}
+
+
+
+.seeAll-btn{
+    background-color: var(--clr-secondary);
+    color: var(--clr-terinary);
+    font-size: var(--fs-p);
+    border-radius: 20px;
+
+    padding: 1.25rem 0;
+    width: 16.7rem;
+    margin-top: 2.5rem;
+    cursor: pointer;
+    
+    align-self: center;
+}
+
+
+@media screen and (min-width: 20em) and (max-width: 24.425em) {
+  
+  .team-section{
+    margin-top: 5rem;
+  }
+
+  .team-heading{
+    flex-direction: column;
+  }
+
+  .team-heading h2{
+    font-size: 2rem;
+  }
+
+  .team-heading p{
+    width: 100%;
+    font-size: 1rem;
+   }
+
+    .team-list, .team-list-expanded{
+        margin-top: 2.5rem;
+        
+        width: 100%;
+        grid-template-columns: repeat(1, 100%);
+        row-gap: 1.875rem;
     }
 
-    .team-heading{
-        margin-left: 6.25rem;
+    .team-member{
+        gap: 1.5rem;
+    }
+    
+    .tm-pi-left{
+        flex-direction: column;
+        gap: 0.625rem;
     }
 
-    .team-heading p{
-        width: 30.5rem;
-        font-size: 1.1.25rem;
+    
+    .tm-name{
+        margin-top: 0;
     }
 
-    .team-list{
-        margin-left: 6.25rem;
-        margin-top: 5rem;
+    .tm-name h4, .tm-name p{
+        font-size: 1rem;
+    }
+    .tm-name h4{
+        font-weight: 500;
     }
 
+    .tm-desc{
+        font-size: 0.875rem;
+    }
+
+    .team-list-expanded.open {
+    /* adjust if needed */
+        max-height: 1300px;
+    }
 }

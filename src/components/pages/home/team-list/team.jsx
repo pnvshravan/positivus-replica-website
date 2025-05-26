@@ -1,5 +1,7 @@
-import './team.css'
+import './team.css';
+import { useState } from "react";
 import { FaLinkedin } from "react-icons/fa6";
+
 
 const Team = ()=>{
 
@@ -26,7 +28,7 @@ const Team = ()=>{
             classid: 'emily-j',
             name: 'Emily Johnson',
             role: 'PPC Manager',
-            desc: '10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy.'
+            desc: '3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis.'
         },
         {
             classid: 'brian-w',
@@ -42,32 +44,66 @@ const Team = ()=>{
         }
     ]
 
+    const [toggle, setToggle] = useState(false);
+    
+    function openmenu(){
+        setToggle(true);
+    }
+
+    function closemenu(){
+        setToggle(false);
+    }
+
     return(
         <>
-            <section className='team-container'>
-                <div className='team-heading'>
-                    <h2 className='font-h2'><mark>Team</mark></h2>
-                    <p>
-                        Meet the skilled and experienced team behind our successful digital marketing strategies
-                    </p>
-                </div>
-                <div className='team-list'>
-                    {team_list.map((item, index)=>(
-                        <div className='team-member' key={index}>
-                            <div className='tm-pi'>
-                                <div className='tm-pi-photo'>
-                                    <div className={`${item.classid}`}></div>
-                                    <div className='tm-name'>
-                                        <h4 className='font-p'>{item.name}</h4>
-                                        <p>{item.role}</p>
+            <section className='team-section'>
+                <div className='team-container container'>
+                    <div className='team-heading'>
+                        <h2 className='font-h2'><mark>Team</mark></h2>
+                        <p>
+                            Meet the skilled and experienced team behind our successful digital marketing strategies
+                        </p>
+                    </div>
+                    <div className='team-list'>
+                        {team_list.slice(0,3).map((item, index)=>(
+                            <div className='team-member' key={index}>
+                                <div className='tm-pi'>
+                                    <div className='tm-pi-left'>
+                                        <div className={`${item.classid}`}></div>
+                                        <div className='tm-name'>
+                                            <h4 className='font-p'>{item.name}</h4>
+                                            <p>{item.role}</p>
+                                        </div>
                                     </div>
                                     <a href=""><span><FaLinkedin size={24}/></span></a>
                                 </div>
                                 <hr/>
                                 <p className='tm-desc'>{item.desc}</p>
-                            </div> 
-                        </div>
-                    ))}
+                            </div>
+                        ))}
+                    </div>
+                        {
+                            <div className={`team-list-expanded ${toggle ? 'open' : 'hidden'}`}>
+                                {
+                                    team_list.slice(3,6).map((item, index)=>(
+                                        <div className='team-member' key={index}>
+                                            <div className='tm-pi'>
+                                                <div className={`${item.classid}`}></div>
+                                                <div className='tm-name'>
+                                                    <h4 className='font-p'>{item.name}</h4>
+                                                    <p>{item.role}</p>
+                                                </div>
+                                                <a href=""><span><FaLinkedin size={24}/></span></a>
+                                            </div>
+                                            <hr/>
+                                            <p className='tm-desc'>{item.desc}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                        }
+                        <button className='seeAll-btn' onClick={() => toggle ? closemenu() : openmenu()}>
+                            {toggle ? 'Show less' : 'See all team'}
+                    </button>
                 </div>
             </section>
         </>
