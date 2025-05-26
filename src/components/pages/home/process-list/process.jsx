@@ -54,7 +54,7 @@ const Process = () => {
                             key={index}
                         >
                             <div className='process-card-content'>
-                                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '1.25rem' }}>
+                                <div style={{ display: 'inline-flex', alignItems: 'center'}} className='pcc-heading'>
                                     <h1 className='font-h1'>{`0${index + 1}`}</h1>
                                     <h3 className='font-h3'>{item.process_name}</h3>
                                 </div>

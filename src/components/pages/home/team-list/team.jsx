@@ -53,20 +53,20 @@ const Team = ()=>{
                 </div>
                 <div className='team-list'>
                     {team_list.map((item, index)=>(
-                    <div className='team-member' key={index}>
-                        <div className='tm-pi'>
-                            <div className='tm-pi-photo'>
-                                <div className={`${item.classid}`}></div>
-                                <div className='tm-name'>
-                                    <h4 className='font-p'>{item.name}</h4>
-                                    <p>{item.role}</p>
+                        <div className='team-member' key={index}>
+                            <div className='tm-pi'>
+                                <div className='tm-pi-photo'>
+                                    <div className={`${item.classid}`}></div>
+                                    <div className='tm-name'>
+                                        <h4 className='font-p'>{item.name}</h4>
+                                        <p>{item.role}</p>
+                                    </div>
+                                    <a href=""><span><FaLinkedin size={24}/></span></a>
                                 </div>
-                                <a href=""><span><FaLinkedin size={24}/></span> </a>
-                            </div>
-                            <hr/>
-                            <p className='tm-desc'>{item.desc}</p>
-                        </div> 
-                    </div>
+                                <hr/>
+                                <p className='tm-desc'>{item.desc}</p>
+                            </div> 
+                        </div>
                     ))}
                 </div>
             </section>
