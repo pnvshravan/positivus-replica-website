@@ -1,5 +1,5 @@
 import "./navbar.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { ROUTE_PATH } from "../../routes/routes";
 import navbar_logo from '/src/assets/logo-black.svg'
@@ -14,11 +14,32 @@ const NavBar=()=>{
 
     function openmenu(){
         setToggle(true);
+        // Add overflow hidden to body when menu is open to prevent scrolling
+        document.body.style.overflow = 'hidden';
     }
-
+    
     function closemenu(){
         setToggle(false);
+        // Restore scrolling when menu is closed
+        document.body.style.overflow = 'auto';
     }
+
+    // Close menu when clicking outside or on ESC key
+    useEffect(() => {
+        const handleEsc = (event) => {
+        if (event.key === 'Escape') {
+            closemenu();
+        }
+        };
+        
+        window.addEventListener('keydown', handleEsc);
+        
+        return () => {
+        window.removeEventListener('keydown', handleEsc);
+        // Ensure overflow is restored when component unmounts
+        document.body.style.overflow = 'auto';
+        };
+    }, []);
 
 
     return(

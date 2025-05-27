@@ -1,0 +1,67 @@
+ const [currentIndex, setCurrentIndex] = useState(0);
+
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => 
+            prevIndex === testimonial_list.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? testimonial_list.length - 1 : prevIndex - 1
+        );
+    };
+
+    return (
+        <div className="testimonial-section">
+            <div className="testimonial-container">
+                <div className="testimonial-heading">
+                    <h2>Testimonials</h2>
+                    <p>Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services</p>
+                </div>
+                
+                <div className="testimonials">
+                    <div 
+                        className="t-track" 
+                        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                    >
+                        {testimonial_list.map((item, index) => (
+                            <div key={index} className="t-slide">
+                                <div className="tooltip">
+                                    <p>{item.tooltip}</p>
+                                </div>
+                                
+                                <div className="person">
+                                    <h4>{item.name}</h4>
+                                    <p>{item.role}</p>
+                                </div>
+                                
+                                <div className="slide_no">
+                                    {index + 1}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    
+                    <div className="indicators">
+                        <button className="nav-btn" onClick={handlePrev} aria-label="Previous testimonial">
+                            <FaArrowLeft />
+                        </button>
+                        
+                        <div className="dots-container">
+                            {testimonial_list.map((_, index) => (
+                                <button
+                                    key={index}
+                                    className={`dot ${index === currentIndex ? 'active' : ''}`}
+                                    onClick={() => setCurrentIndex(index)}
+                                    aria-label={`Go to testimonial ${index + 1}`}
+                                />
+                            ))}
+                        </div>
+                        
+                        <button className="nav-btn" onClick={handleNext} aria-label="Next testimonial">
+                            <FaArrowRight />
+                        </button>
+                    </div>
+                </div>
+            </div>
