@@ -1,6 +1,6 @@
 import './team.css';
 import { useState } from "react";
-import { FaLinkedin } from "react-icons/fa6";
+// import { FaLinkedin } from "react-icons/fa6";
 
 
 const Team = ()=>{
@@ -66,38 +66,14 @@ const Team = ()=>{
                     </div>
                     <div className='team-list'>
                         {team_list.slice(0,3).map((item, index)=>(
-                            <div className='team-member' key={index}>
-                                <div className='tm-pi'>
-                                    <div className='tm-pi-left'>
-                                        <div className={`${item.classid}`}></div>
-                                        <div className='tm-name'>
-                                            <h4 className='font-p'>{item.name}</h4>
-                                            <p>{item.role}</p>
-                                        </div>
-                                    </div>
-                                    <a href=""><span><FaLinkedin size={24}/></span></a>
-                                </div>
-                                <hr/>
-                                <p className='tm-desc'>{item.desc}</p>
-                            </div>
+                            <TeamMember key={index} item={item}/>
                         ))}
                     </div>
                         {
                             <div className={`team-list-expanded ${toggle ? 'open' : 'hidden'}`}>
                                 {
                                     team_list.slice(3,6).map((item, index)=>(
-                                        <div className='team-member' key={index}>
-                                            <div className='tm-pi'>
-                                                <div className={`${item.classid}`}></div>
-                                                <div className='tm-name'>
-                                                    <h4 className='font-p'>{item.name}</h4>
-                                                    <p>{item.role}</p>
-                                                </div>
-                                                <a href=""><span><FaLinkedin size={24}/></span></a>
-                                            </div>
-                                            <hr/>
-                                            <p className='tm-desc'>{item.desc}</p>
-                                        </div>
+                                        <TeamMember key={index} item={item}/>
                                     ))}
                                 </div>
                         }
@@ -111,3 +87,27 @@ const Team = ()=>{
 }
 
 export default Team;
+
+/* Team memmber card component*/
+
+export const TeamMember = ({item})=>{
+    return(
+        <>
+            <div className='team-member' key={item.index}>
+                <div className='tm-pi'>
+                    <div className='tm-pi-left'>
+                        <div className={`${item.classid}`}></div>
+                        <div className='tm-name'>
+                            <h4 className='font-p'>{item.name}</h4>
+                            <p>{item.role}</p>
+                        </div>
+                    </div>
+                    <a href=""><span className='linkedIcon'></span></a>
+                </div>
+                <hr/>
+                <p className='tm-desc'>{item.desc}</p>
+            </div>
+        </>
+    )
+}
+
