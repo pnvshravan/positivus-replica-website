@@ -16,7 +16,7 @@ export const Home=() =>{
             <CaseStudy/>
             <Process/>
             <Team/>
-            {/* <Testimonials/> */}
+            <Testimonials/>
             <ContactForm/>
         </>
     );

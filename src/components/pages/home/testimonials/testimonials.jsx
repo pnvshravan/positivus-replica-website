@@ -1,7 +1,8 @@
 import './testimonials.css'
 
-import { BsArrowRightCircleFill } from "react-icons/bs";
-import { BsArrowLeftCircleFill } from "react-icons/bs";
+
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+
 import { useState } from 'react';
 
 const Testimonials = ()=>{
@@ -52,50 +53,48 @@ const Testimonials = ()=>{
 
     return(
         <>
-            <section className='testimonal-container'>
-                <div className='testimonial-heading'>
-                    <h2 className='font-h2'><mark>Testimonials</mark></h2>
-                    <p>
-                        Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services
-                    </p>
-                </div>
-                <div className='testimonials'>
-                        <div className='testimonial-inner'>
-                                <div className='t-track' style={{ transform: `translateX(-${currentIndex * 40}%)` }}> 
-                                {
-                                    testimonal_list.map((item, index)=>(
-                                    <div className='t-slide' key={index}>
-                                            <div className="tooltip">
-                                                {item.tooltip}
-                                                
-                                            </div>
-                                            <div className='person'>
-                                                <h4 className='font-p'>{item.name}</h4>
-                                                <p>{item.role}</p>                                                
-                                            </div>
-                                            <p className={index === currentIndex ? "slide_no active" : "slide_no"}>{index +1}</p>
-                                    </div>  
-                                    ))    
-                                }
-                                </div>
-
-                                <div className='indicators'>
-                                    <BsArrowLeftCircleFill size={50} style={{ fill:'#F3F3F3', cursor:'pointer'}} onClick={handlePrev}/>
-                                    
-                                    <div className="dots">
-                                        {testimonal_list.map((_, index) => (
-                                            <button 
-                                                key={index} 
-                                                className={index === currentIndex ? "dot active" : "dot"}
-                                                onClick={() => setCurrentIndex(index)}
-                                            />
-                                        ))}
+            <section className='testimonial-section'>
+                <div className='testimonial-container container'>
+                    <div className='testimonial-heading'>
+                        <h2 className='font-h2'><mark>Testimonials</mark></h2>
+                        <p>
+                            Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services
+                        </p>
+                    </div>
+                    <div className='testimonials'>
+                        <div className='t-track' style={{ transform: `translateX(-${currentIndex * 40}%)` }}> 
+                        {
+                            testimonal_list.map((item, index)=>(
+                                <div className='t-slide' key={index}>
+                                    <div className="tooltip"> {item.tooltip} </div>
+                                    <div className='person'>
+                                        <h4 className='font-p'>{item.name}</h4>
+                                        <p>{item.role}</p>                                                
                                     </div>
-                                    
-                                    <BsArrowRightCircleFill size={50} style={{fill:'#F3F3F3', cursor:'pointer'}} onClick={handleNext}/>
-                                   
-                                </div>
+                                    <p className={index === currentIndex ? "slide_no active" : "slide_no"}>{index +1}</p>
+                                </div>  
+                            ))    
+                        }
                         </div>
+
+                        <div className='indicators'>
+                            
+                            <FaArrowLeft color='#F3F3F3' size={40} style={{ cursor:'pointer'}} onClick={handlePrev}/>
+                            
+                            <div className="dots">
+                                {testimonal_list.map((_, index) => (
+                                    <button 
+                                        key={index} 
+                                        className={index === currentIndex ? "dot active" : "dot"}
+                                        onClick={() => setCurrentIndex(index)}
+                                    />
+                                ))}
+                            </div>
+                            
+                            <FaArrowRight color='#F3F3F3' size={40} style={{ cursor:'pointer'}} onClick={handleNext}/>
+                        
+                        </div>
+                    </div>
                 </div>
             </section>
         </>
