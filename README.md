@@ -12,5 +12,5 @@
 ### Tools used:
 1. [CSS Generators](https://css-generators.com/) for generating custom shapes.
 
-2. ChatGPT/Claude helped in rewriting some component logic wherever needed.
+2. ChatGPT/Claude helped in refactoring some component logic wherever needed.
 
