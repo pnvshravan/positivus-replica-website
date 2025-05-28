@@ -27,14 +27,14 @@ const Footer = ()=>{
                     <div className="nav-links-footer">
                         <ul>
                             <li>
-                                <NavLink to={ROUTE_PATH.ABOUT}>About Us</NavLink>
+                                <NavLink to={ROUTE_PATH.COMING_SOON}>About Us</NavLink>
                             </li>
                             <li>
-                                <NavLink to={ROUTE_PATH.SERVICES}>Services</NavLink>
+                                <NavLink to={ROUTE_PATH.COMING_SOON}>Services</NavLink>
                             </li>
-                            <li><NavLink to={ROUTE_PATH.USE_CASES}>Use Cases</NavLink></li>
-                            <li><NavLink to={ROUTE_PATH.PRICING}>Pricing</NavLink></li>
-                            <li><NavLink to={ROUTE_PATH.BLOG}>Blog</NavLink></li>
+                            <li><NavLink to={ROUTE_PATH.COMING_SOON}>Use Cases</NavLink></li>
+                            <li><NavLink to={ROUTE_PATH.COMING_SOON}>Pricing</NavLink></li>
+                            <li><NavLink to={ROUTE_PATH.COMING_SOON}>Blog</NavLink></li>
                         </ul>
                     </div>
                     <div className='footer-social-links' style={{cursor:'pointer'}}>

@@ -6,16 +6,10 @@
 
 
 .contact-form-container{
-    /* height: 55rem; */
-
     display: flex;
     flex-direction: column;
 
     gap: 5rem;
-    /* margin-top: 10.75rem;
-    margin-bottom: 7.75rem; */
-
-    /* border: 1px solid black; */
 }
 
 .contact-heading{

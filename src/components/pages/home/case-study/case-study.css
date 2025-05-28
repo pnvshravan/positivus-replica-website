@@ -113,9 +113,7 @@
     /* padding-right: 4rem;  */
 }
 
-/* .cs-list:last-child{
-    gap: 0;
-} */
+
 
 .cs-list-card{
     color: white;
@@ -145,6 +143,13 @@
 .controls{
     display: none;
 }
+
+.controls button{
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
 
 
 @media screen and (min-width: 20em) and (max-width: 24.425em) {
@@ -238,28 +243,6 @@
         display: block;
     }
 
-    /* .cs-slider-card{
-        font-size: 1rem;
-        background-color: var(--clr-secondary);
-
-        height: 19.375rem;
-        padding: 2rem 1.5rem;
-        border-radius: 45px;
-
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .cs-slider-card p, .cs-slider-card a{
-        font-size: 18px;
-    }
-
-    .cs-slider-card:last-child{
-        border: none;
-        padding-right: 1.5rem;
-    }   */
-
     .cs-slider-wrapper {
         display: block;
         overflow: hidden;
@@ -295,6 +278,7 @@
         width: 6.75rem;
         margin-bottom: 40px;
     }
+    
 
     
 }
@@ -373,24 +357,6 @@
         gap: 20px;
     }
 
-    /* .cs-slider-card{
-        font-size: 1.25rem;
-        background-color: var(--clr-secondary);
-
-        height: max-content;
-        padding: 2rem 1.5rem;
-        border-radius: 45px;
-
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    } */
-
-    /* .cs-slider-card:last-child{
-        border: none;
-        padding-right: 1.5rem;
-    } */
-
     .cs-slider-wrapper {
         display: block;
         overflow: hidden;
@@ -425,10 +391,6 @@
 
       }
 
-      /* .cs-slider-card a{
-        font-size: 20px;
-      } */
-
     .controls{
         display: flex;   
         gap: 20px;
@@ -436,6 +398,7 @@
         /* width: 9rem; */
         /* display: none; */
     }
+
 
 }
 
@@ -516,25 +479,6 @@
         align-items: center;
     }
 
-    /* .cs-slider-card{
-        font-size: 1.25rem;
-        background-color: var(--clr-secondary);
-
-        height: max-content;
-        width: 33.75rem;
-        padding: 3.75rem 1.875rem;
-        border-radius: 45px;
-
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .cs-slider-card:last-child{
-        border: none;
-        padding-right: 1.5rem;
-    } */
-
     .cs-slider-wrapper {
         display: block;
         overflow: hidden;
@@ -582,8 +526,6 @@
     }
 
 }
-
-
 
 
 /*Displays Image in cta-right class*/ 

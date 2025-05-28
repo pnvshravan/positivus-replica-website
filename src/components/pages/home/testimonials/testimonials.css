@@ -1,7 +1,11 @@
-/* RESPONSIVE CHANGES - Main container */
+/* HTML: <div class="tooltip">This is a Speech Bubble with a solid coloration and with border radius </div> */
+/*https://css-generators.com/*/
+
+
+
 .testimonial-section {
     margin-top: clamp(3rem, 8vw, 6.25rem);
-    /* Removed padding since .container class handles the responsive widths and margins */
+    
 }
 
 .testimonial-container {
@@ -10,16 +14,16 @@
     gap: clamp(2rem, 5vw, 3.62rem);
     
     align-items: center;
-    /* Removed max-width and margin auto since .container handles this */
+    
 }
 
-/* RESPONSIVE CHANGES - Heading */
+
 .testimonial-heading {
     display: flex;
     flex-direction: column;
     gap: clamp(1rem, 3vw, 2.5rem);
     text-align: center;
-    /* CHANGE: Removed fixed width, added flex-direction column for mobile */
+    
 }
 
 .testimonial-heading h2 {
@@ -36,7 +40,7 @@
     margin: 0 auto;
 }
 
-/* RESPONSIVE CHANGES - Main testimonials container */
+
 .testimonials {
     overflow: hidden;
     position: relative;
@@ -50,15 +54,15 @@
 
     width: 100%;
     max-width: 48rem;
-    /* CHANGE: Added responsive padding and border-radius */
+    
 }
 
-/* RESPONSIVE CHANGES - Track and slides */
+
 .t-track {
     display: flex;
     width: 100%;
     transition: transform 0.5s ease-in-out;
-    /* CHANGE: Removed fixed padding, handled by container */
+    
 }
 
 .t-slide {
@@ -69,27 +73,27 @@
     align-items: center;
     text-align: center;
     padding: 0 clamp(0.5rem, 2vw, 1rem);
-    /* CHANGE: Added responsive padding and centering */
+    
 }
 
-/* RESPONSIVE CHANGES - Tooltip */
+
 .tooltip {
     color: #fff;
     max-width: clamp(300px, 90vw, 600px);
     text-align: center;
-    min-height: clamp(200px, 25vw, 240px);
-    /* CHANGE: Made max-width responsive, changed height to min-height */
+    min-height: clamp(200px, 25vw, 240px); /* CHANGE: Made max-width responsive, changed height to min-height */
     font-size: clamp(0.75rem, 2.5vw, 1.125rem);
-    --a: 90deg;
-    --h: clamp(1rem, 2vw, 1.5rem);
-    --p: 14%;
-    --r: clamp(25px, 5vw, 45px);
-    --b: 2px;
+
+      /* triangle dimension */
+    --a: 90deg; /* angle */
+    --h: clamp(1rem, 2vw, 1.5rem); /* height */
+    --p: 14%; /* triangle position (0%:left 100%:right) */
+    --r: clamp(25px, 5vw, 45px); /* the radius */
+    --b: 2px; /* border width  */
     --c1: #B9FF66;
     --c2: #191A23;
 
-    padding: clamp(1.5rem, 4vw, 2.5rem);
-    /* CHANGE: Made padding responsive */
+    padding: clamp(1.5rem, 4vw, 2.5rem); /* CHANGE: Made padding responsive */
     border-radius: var(--r) var(--r) min(var(--r),100% - var(--p) - var(--h)*tan(var(--a)/2)) min(var(--r),var(--p) - var(--h)*tan(var(--a)/2))/var(--r);
     clip-path: polygon(0 100%,0 0,100% 0,100% 100%,
         min(100%,var(--p) + var(--h)*tan(var(--a)/2)) 100%,
@@ -125,21 +129,22 @@
     line-height: 1.6;
     margin: 0;
     text-wrap: wrap;
-    /* CHANGE: Made font-size responsive */
+   
 }
 
-/* RESPONSIVE CHANGES - Person info */
+
 .person {
     margin-top: clamp(1.5rem, 4vw, 2.5rem);
     text-align: center;
-    /* CHANGE: Removed fixed left margin, centered text */
+
+    display: flex;
+    gap: clamp(10px, 2vw, 20px);
 }
 
 .person h4 {
     color: var(--clr-accent);
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     margin: 0 0 0.5rem 0;
-    /* CHANGE: Made font-size responsive */
 }
 
 .person p {
@@ -147,10 +152,10 @@
     font-size: clamp(0.875rem, 2vw, 1rem);
     margin: 0;
     
-    /* CHANGE: Made font-size responsive */
+
 }
 
-/* RESPONSIVE CHANGES - Slide number */
+
 .slide_no {
     color: var(--clr-terinary);
     background-color: #343434;
@@ -159,7 +164,10 @@
     border-radius: clamp(20px, 5vw, 45px);
     font-size: clamp(0.875rem, 2vw, 1.125rem);
     margin-top: clamp(1rem, 3vw, 1.5rem);
-    /* CHANGE: Made padding, border-radius, and font-size responsive */
+
+    width: max-content;
+    height: max-content;
+    
 }
 
 .slide_no.active {
@@ -168,7 +176,7 @@
     font-weight: 700;
 }
 
-/* RESPONSIVE CHANGES - Indicators */
+
 .indicators {
     display: flex;
     justify-content: center;
@@ -176,14 +184,14 @@
     gap: clamp(2rem, 8vw, 10.625rem);
     width: 100%;
     flex-wrap: wrap;
-    /* CHANGE: Made gap responsive, added flex-wrap */
+    
 }
 
-.dots-container {
+.dots{
     display: flex;
     gap: clamp(0.5rem, 2vw, 1rem);
     align-items: center;
-    /* CHANGE: Made gap responsive */
+    
 }
 
 .dot {
@@ -194,7 +202,7 @@
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    /* CHANGE: Made size responsive */
+    
 }
 
 .dot.active {
@@ -202,11 +210,8 @@
     transform: scale(1.2);
 }
 
-.dot:hover {
-    transform: scale(1.1);
-}
 
-/* RESPONSIVE BREAKPOINTS - Adjusted to work with .container class */
+
 @media (max-width: 48em) {
     .testimonial-heading {
         text-align: center;
@@ -229,11 +234,12 @@
     }
     
     .indicators {
-        flex-direction: column;
+        flex-direction: row;
         gap: 1.5rem;
     }
     
-    .dots-container {
-        order: -1;
+    .arrow-left, .arrow-right{
+        width: 24px;
+        height: 24px;
     }
-  }     
+}     

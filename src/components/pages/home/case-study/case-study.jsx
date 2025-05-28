@@ -1,9 +1,14 @@
 import './case-study.css';
 import ctaImg from '/src/assets/cta-img.svg';
 import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
+import { LuCircleArrowRight, LuCircleArrowLeft } from "react-icons/lu";
 import { useState, useRef } from 'react';
 
+
+
 const CaseStudy = () => {
+
+
   const case_studies_list = [
     'For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.',
     'For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.',
@@ -76,8 +81,14 @@ const CaseStudy = () => {
           </div>
 
           <div className='controls'>
-            <button onClick={() => changeSlide(-1)}><IoArrowBackCircleOutline size={40} /></button>
-            <button onClick={() => changeSlide(1)}><IoArrowForwardCircleOutline size={40} /></button>
+            <button onClick={() => changeSlide(-1)}>
+              <IoArrowBackCircleOutline size={40} className=''/>
+            {/* <LuCircleArrowLeft size= {40}/> */}
+            </button>
+            <button onClick={() => changeSlide(1)}>
+              <IoArrowForwardCircleOutline size={40} />
+              {/* <LuCircleArrowRight size={40}/> */}
+            </button>
           </div>
         </div>
       </div>

@@ -101,7 +101,6 @@ are ready and mapped resp. */
     .nav-links-mobile, .menu-btn-mobile{
         display: block;
         
-        /* background-color: grey; */
     }
 
     .logo img{
@@ -109,26 +108,6 @@ are ready and mapped resp. */
         height: 25px;
     }
  
-    /* nav{  
-         
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        
-        margin-inline: 1.875rem;   
-        margin-top: 1.875rem;
-        
-    } */
-   
-    /* .nav-links-mobile-container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-     
-        
-        border-radius: 10px;
-           
-    } */
 
     .navbar{
         display: flex;
@@ -188,6 +167,11 @@ are ready and mapped resp. */
         display: block;
         
     }
+
+    .logo img{
+        width: 170px;
+        height: 30px;
+    }
     
     .navbar{
         display: flex;
@@ -195,13 +179,7 @@ are ready and mapped resp. */
         justify-content: space-between;
     }
 
-    /* .nav-links-mobile-container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-           
-    } */
+  
     .nav-links-mobile{
         
         display: block;
@@ -281,59 +259,3 @@ are ready and mapped resp. */
        
     }
 }
-
-/*same rules as before one*/
-/* @media screen and (min-width: 53.8125em) and (max-width: 81.2375em)
-{
-    .navbar-container{
-        margin: 0; 
-        padding-inline: 0;
-    }
-
-    .navbar{ 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    
-    }
-    .nav-links ul{
-        display: flex;
-        gap: 1rem;
-        
-        font-size: 1rem;
-    }
-    .logo img{
-        width: 130px;
-        height: 25px;
-    }
-    .nav-btn{
-        padding: 1rem;
-        
-        width: 100%;
-        font-size: 1rem;
-       
-    }
-} */
-/* @media screen and (min-width: 81.25em) and (max-width: 90em) 1300 to 1440 */
-
-
-   
-    /* nav{
-        
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        
-        margin-inline: 6.25rem !important;  
-        margin-top: 3.75rem;
-    }
-  
-    .nav-links ul{
-        display: flex;
-        gap: 2.5rem;
-    }
-
-    .nav-links{
-        margin-right: 2.5rem;
-    }
-     */

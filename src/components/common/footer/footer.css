@@ -1,5 +1,5 @@
 .footer-section{
-    /* min-height: 35rem; */
+    
     height: auto;
 
     margin-top: 8.75rem;
@@ -9,16 +9,13 @@
 
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    
 
 }
 
 .inner-footer{
-    /* border: 2px solid white; */
+    
     background-color: var(--clr-secondary);
-    /* height: 28.44rem;  
-    width: 78.37rem;
-    margin: 0 auto; */
 
     display: flex;
     flex-direction: column;
@@ -34,7 +31,6 @@
     margin-top: 2.5rem;
     display: flex;
     align-items: center;
-    /* border: 1px solid salmon; */
 
     justify-content: space-between;
 }
@@ -74,13 +70,9 @@
 
 /*----------------------------------*/
 .contact-info{
-    /* border: 1px solid wheat; */
-
     display: flex;
-   
     gap: 16.5rem;
-
-    /* height: 11.56rem; */
+    
 }
 
 .info-left{
@@ -89,7 +81,6 @@
     display: inline-flex;
     flex-direction: column;
    
-    /* border: 1px solid white; */
 }
 .info-left ul{
     list-style: none;
@@ -166,10 +157,6 @@
 .hr{
     border: 1px solid var(--clr-terinary);
 }
-
-/* .copyright-text{
-    margin-top: 3.12rem;
-} */
 
 .copyright a{
     margin-left: 2.5rem;
@@ -335,7 +322,6 @@
 
     .nav-links-footer ul{
         display: flex;
-        /* flex-direction: column; */
         gap: 1.25rem;
         align-items: center; 
     

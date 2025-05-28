@@ -1,39 +1,32 @@
 
 /*-----------------team-members-sprite--------------*/
-.john-s{
+.john-s, .jane-d,  .mich-b, .emily-j, .brian-w, .sarah-k{
     height: 96px;
     width: 96px;
     flex-shrink: 0;
+}
+
+.john-s{
     background: url('/src/assets/team-members.webp') 0 0;
 }
+
 .jane-d{
-    height: 96px;
-    width: 96px;
-    flex-shrink: 0;
     background: url('/src/assets/team-members.webp') -136px 0;
 }
+
 .mich-b{
-    height: 96px;
-    width: 96px;
-    flex-shrink: 0;
     background: url('/src/assets/team-members.webp') -272px 0;
 }
+
 .emily-j{
-    height: 96px;
-    width: 96px;
-    flex-shrink: 0;
     background: url('/src/assets/team-members.webp') -408px 0;
 }
+
 .brian-w{
-    height: 96px;
-    width: 96px;
-    flex-shrink: 0;
     background: url('/src/assets/team-members.webp') -544px 0;
 }
+
 .sarah-k{
-    height: 96px;
-    width: 96px;
-    flex-shrink: 0;
     background: url('/src/assets/team-members.webp') -680px 0;
 }
 /*---------------------------------------------------------------------------*/
@@ -73,7 +66,7 @@
 }
 .team-member{
     border: 2px solid black;
-    /* box-shadow: 0px 5px 0px #191A23; */
+    box-shadow: 0px 5px 0px #191A23;
     border-radius: 45px;
     padding: 2rem;
     
@@ -116,7 +109,7 @@
 
 .team-list-expanded {
   max-height: 0;
-  overflow: hidden;
+  overflow: visible;
   opacity: 0;
   transform: translateY(20px);
   pointer-events: none;
@@ -170,7 +163,7 @@
     font-size: 1rem;
    }
 
-    .team-list, .team-list-expanded{
+   .team-list, .team-list-expanded{
         margin-top: 2.5rem;
         
         width: 100%;

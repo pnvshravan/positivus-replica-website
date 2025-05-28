@@ -53,7 +53,6 @@ const Testimonials = ()=>{
     return(
         <>
             <section className='testimonial-section'>
-                {/* {container class is not used this section, as the css rules are adjusted for it already} */}
                 <div className='testimonial-container container'> 
                     <div className='testimonial-heading'>
                         <h2 className='font-h2'><mark>Testimonials</mark></h2>
@@ -67,11 +66,15 @@ const Testimonials = ()=>{
                             testimonal_list.map((item, index)=>(
                                 <div className='t-slide' key={index}>
                                     <div className="tooltip"> {item.tooltip} </div>
+                                    
                                     <div className='person'>
-                                        <h4 className='font-p'>{item.name}</h4>
-                                        <p>{item.role}</p>                                                
+                                        <p className={index === currentIndex ? "slide_no active" : "slide_no"}>{index +1}</p>
+                                        <div>
+                                            <h4 className='font-p'>{item.name}</h4>
+                                            <p>{item.role}</p>   
+                                        </div>                                       
                                     </div>
-                                    <p className={index === currentIndex ? "slide_no active" : "slide_no"}>{index +1}</p>
+                                    
                                 </div>  
                             ))    
                         }

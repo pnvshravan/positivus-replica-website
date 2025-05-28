@@ -23,16 +23,6 @@
     /* width: auto; */
 }
 
-/* .hero-left p{
-    
-    margin-top: 0.94rem;
-
-    max-width: 47.5rem;
-    width: auto;
-
-    font-size: 1.75rem;
-} */
-
 .hero-left button{
     /* height: 4.7rem; */
     padding: 1.25rem 2.1875rem;
@@ -143,7 +133,6 @@
 
 
     .hero-left{
-        /* margin-left: 8.75rem; */
         width: 100%;
         display: contents;
     }

@@ -1,5 +1,5 @@
 .process-section{
-    margin-top: 8.75rem;
+    margin-top: 5rem;
     /* padding-inline: 0; */
 }
 
@@ -201,7 +201,7 @@ hr{
 
     .desc{
         margin-top: 0.625rem;
-        font-size: 1rem;
+        font-size: 0.875rem;
     }
 
 } 
@@ -264,7 +264,7 @@ hr{
 
     .desc{
         margin-top: 0.625rem;
-        font-size: calc(1.25rem - 10%);
+        font-size: 1rem;
     }
 
 
